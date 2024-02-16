@@ -46,3 +46,21 @@ console.log(nextPrime);
 
 console.log('')
 
+//Feeling Loopy
+console.log("Feeling loopy")
+
+// CSV file snippet with data that we want to parse
+let csv = 'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26'
+
+function formatCSV(csv) {
+    // Creates the row by spliting the data when there's a new line
+    let row = csv.split('\n');
+
+    // Loop to iterate over each row and split the data into cells 
+    for(let i = 0; i < row.length; i++) {
+        let cell = row[i].split(',');
+        console.log(cell[0],cell[1], cell[2], cell[3])
+    }
+}
+
+console.log(formatCSV(csv))
